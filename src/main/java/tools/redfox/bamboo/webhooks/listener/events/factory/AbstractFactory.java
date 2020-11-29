@@ -73,7 +73,7 @@ abstract public class AbstractFactory {
     protected Job getJobFor(BuildResultsSummary summary) {
         return applySummary(
                 new Job(
-                        summary.getPlanName(),
+                        summary.getImmutablePlan().getName(),
                         getAbsoluteUrlFor("/browse/" + summary.getBuildResultKey())
                 ), summary
         );

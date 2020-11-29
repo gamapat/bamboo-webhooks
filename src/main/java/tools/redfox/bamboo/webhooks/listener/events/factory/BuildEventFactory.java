@@ -57,7 +57,7 @@ public class BuildEventFactory extends AbstractFactory {
 
         return new BuildFinishedEvent(
                 chain.getProject().getName(),
-                new Plan(result.getPlanName(), result.getPlanKey().getKey(), getAbsoluteUrlFor("/browse/" + result.getPlanKey())),
+                new Plan(result.getImmutablePlan().getName(), result.getPlanKey().getKey(), getAbsoluteUrlFor("/browse/" + result.getPlanKey())),
                 build
         );
     }

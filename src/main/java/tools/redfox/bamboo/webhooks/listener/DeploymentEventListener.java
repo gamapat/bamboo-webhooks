@@ -95,7 +95,7 @@ public class DeploymentEventListener {
 
     protected Plan getPlan(ResultsSummary results) {
         return new Plan(
-                results.getPlanName(),
+                results.getImmutablePlan().getName(),
                 results.getPlanKey().getKey(),
                 BuildEventFactory.getAbsoluteUrlFor("/browse/" + results.getPlanKey().getKey())
         );
